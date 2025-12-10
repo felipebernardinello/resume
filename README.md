@@ -22,4 +22,4 @@ make pdf
 
 ### License
 
-Format is MIT but all the data is owned by Filipe Bernardinello.
+Apache 2.0
