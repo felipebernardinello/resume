@@ -1,0 +1,102 @@
+% !TeX program = lualatex
+
+% *Author: Felipe Bernardinello*
+% *License: Apache 2.0*
+
+\documentclass[letterpaper,10pt]{article}
+\usepackage{lib/commands}
+
+\begin{document}
+
+% Header
+\createHeader{
+    name = {Felipe Bernardinello},
+    linkedin = {https://www.linkedin.com/in/bernardinello/},
+    phone = {+55 (14) 99999-9999},
+    email = {felipebernardinello@gmail.com},
+    github = {https://github.com/felipebernardinello},
+    address = {Bauru, São Paulo}
+}
+
+% Education section
+\createEducationSection{
+    \EducationItem[
+        institution = {São Paulo State University (UNESP)},
+        location = {Bauru, São Paulo},
+        degree = {Bachelor of Science in Computer Science},
+        date = {Feb. 2022 -- Dec. 2025}
+    ]
+}
+
+% Experience section
+\createExperienceSection{
+    \ExperienceItem[
+        title = {Job Title},
+        company = {Company Name},
+        date = {Jan. 2020 -- Present},
+        location = {City, State}
+    ]{
+        \Description{Description of the most important responsibility or achievement in this role}
+        \Description{Details about a specific project, the technology stack used (e.g., Java, Python), and the outcome}
+        \Description{Quantifiable result achieved (e.g., reduced processing time by 20\% or increased revenue by 15\%)}
+        \Description{Mention of soft skills or team leadership responsibilities, if applicable}
+    }
+    
+    \ExperienceItem[
+        title = {Previous Job Title},
+        company = {Previous Company Name},
+        date = {Jan. 2018 -- Dec. 2019},
+        location = {City, State}
+    ]{
+        \Description{Description of the main tasks performed in this role}
+        \Description{Implementation of a specific feature or system module}
+        \Description{Collaboration with other teams or stakeholders to achieve a common goal}
+    }
+}
+
+% Projects section
+\createProjectsSection{
+    \ProjectItem[
+        name = {Project Name Alpha},
+        date = {Jan. 2023 -- Present}
+    ]{
+        \Description{Brief summary of what the project does and its target audience}
+        \Description{Technical details about the architecture (e.g., Microservices, Monolith) and languages used}
+        \Description{Specific challenges overcome during development or deployment}
+    }
+
+    \ProjectItem[
+        name = {Project Name Beta},
+        date = {Jun. 2022 -- Dec. 2022}
+    ]{
+        \Description{Description of the problem this project solves}
+        \Description{Tools and frameworks utilized (e.g., React, Spring Boot, Docker)}
+        \Description{Outcome or impact of the project (e.g., open source contribution, hackathon winner)}
+    }
+}
+
+% Research section
+\createResearchSection{
+    \ResearchItem[
+        role = {Research Assistant},
+        institution = {University Name},
+        date = {Jan. 2021 -- Dec. 2021},
+        location = {City, State}
+    ]{
+        \Description{Summary of the research topic or hypothesis being investigated}
+        \Description{Methodology used for experiments or data analysis}
+        \Description{Results obtained or papers published as a result of this research}
+    }
+}
+
+% Skills section
+\createSkillsSection{
+    \SkillItem[category = {Languages}, skills = {Java, C++, TypeScript, Python, SQL}]
+    \SkillItem[category = {Frameworks}, skills = {Spring Boot, Quarkus, React, PyTorch, LangGraph}]
+    \SkillItem[category = {Libraries}, skills = {NumPy, Pandas, Matplotlib}]
+    \SkillItem[category = {Databases}, skills = {MongoDB, PostgreSQL, Redis}]
+    \SkillItem[category = {Tools \& Technologies}, skills = {Docker, Kafka, Pulsar, GraphQL, RabbitMQ, AWS, GraalVM}]
+    \SkillItem[category = {Methodologies}, skills = {Agile, Scrum, Kanban, CI/CD}]
+}
+
+\end{document}
