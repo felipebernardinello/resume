@@ -2,9 +2,9 @@ name: Compile Resume PDF
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 permissions:
   contents: write
@@ -13,19 +13,19 @@ jobs:
   compile:
     name: Compile resume pdf
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Check out the repo
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           persist-credentials: true
-        
+
       - name: Build and Compile PDF
         run: make pdf
-          
+
       - name: Commit the generated PDF
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: 'Update compiled resume'
-          file_pattern: 'bearsume.pdf'
+          commit_message: "Update compiled resume"
+          file_pattern: "resume.pdf"

@@ -3,8 +3,8 @@ ifeq ($(OS),Windows_NT)
 	RM = del /f /q
 endif
 
-IMAGE_NAME = bearsume
-TEX_FILE = bearsume
+IMAGE_NAME = resume
+TEX_FILE = resume
 TEX_SOURCES = $(TEX_FILE).tex lib/commands.sty lib/lua_parsing.lua
 
 PDF_FILE = $(TEX_FILE).pdf

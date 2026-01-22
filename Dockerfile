@@ -22,4 +22,4 @@ RUN apt-get update && \
 WORKDIR /data
 VOLUME ["/data"]
 
-CMD ["lualatex", "bearsume.tex"]
+CMD ["lualatex", "resume.tex"]
