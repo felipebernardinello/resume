@@ -4,6 +4,13 @@ A clean and simple resume template for software developers, built with LuaLaTeX 
 
 This layout is based on the popular [sb2nov/resume](https://github.com/sb2nov/resume/).
 
+## Requirements
+
+Before you get started, make sure you’ve got:
+
+- [Docker](https://docs.docker.com/get-docker/) installed and running
+- [GNU Make](https://www.gnu.org/software/make/) available on your system (Linux usually have it by default)
+
 ## How to Use
 
 ### Build using Docker and Makefile
