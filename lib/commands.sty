@@ -1,4 +1,4 @@
-\ProvidesPackage{commands}[LuaLaTeX Resume Commands Package]
+\ProvidesPackage{lib/commands}[LuaLaTeX Resume Commands Package]
 
 % Base packages
 \RequirePackage{fontspec}
@@ -23,11 +23,11 @@
 \renewcommand{\footrulewidth}{0pt}
 \setlength{\footskip}{10pt}
 
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\oddsidemargin}{-0.65in}
+\addtolength{\evensidemargin}{-0.65in}
+\addtolength{\textwidth}{1.3in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.3in}
 
 \urlstyle{same}
 \raggedbottom
@@ -68,6 +68,7 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
+% Description command (same as item but for clarity)
 \newcommand{\Description}[1]{\resumeItem{#1}}
 
 % Header
