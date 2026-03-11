@@ -7,6 +7,7 @@ RUN apt-get update && \
     texlive-luatex \
     texlive-latex-recommended \
     texlive-latex-extra \
+    texlive-fonts-extra \
     \
     fonts-texgyre \
     \
