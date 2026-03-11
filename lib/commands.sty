@@ -15,6 +15,9 @@
 % TeX Gyre Termes (Times new roman open-source alternative)
 \setmainfont{TeX Gyre Termes}
 
+% Icons
+\RequirePackage{fontawesome5}
+
 % Page configuration
 \pagestyle{fancy}
 \fancyhf{}
@@ -71,16 +74,17 @@
 % Description command (same as item but for clarity)
 \newcommand{\Description}[1]{\resumeItem{#1}}
 
+
 % Header
 \NewDocumentCommand{\createHeader}{m}{%
     \directlua{set_resume_data("header", \luastring{#1})}%
     \begin{center}
-        \textbf{\Huge \scshape \directlua{tex.sprint(get_resume_value("header", "name"))}} \\ \vspace{1pt}
-        \href{\directlua{tex.sprint(get_resume_value("header", "linkedin"))}}{\underline{LinkedIn}} $|$ 
-        \directlua{tex.sprint(get_resume_value("header", "phone"))} $|$
-        \href{mailto:\directlua{tex.sprint(get_resume_value("header", "email"))}}{\underline{\directlua{tex.sprint(get_resume_value("header", "email"))}}} $|$
-        \href{\directlua{tex.sprint(get_resume_value("header", "github"))}}{\underline{GitHub}} $|$ 
-        \directlua{tex.sprint(get_resume_value("header", "address"))}
+        \textbf{\Huge \scshape \directlua{tex.sprint(get_resume_value("header", "name"))}} \\ \vspace{2pt}
+        \small      \href{https://linkedin.com/in/\directlua{tex.sprint(get_resume_value("header", "linkedin"))}/}{\faLinkedin\ \underline{/in/\directlua{tex.sprint(get_resume_value("header", "linkedin"))}}} $|$ 
+        \href{mailto:\directlua{tex.sprint(get_resume_value("header", "email"))}}{\faEnvelope\ \underline{\directlua{tex.sprint(get_resume_value("header", "email"))}}} $|$         \href{https://github.com/\directlua{tex.sprint(get_resume_value("header", "github"))}}{\faGithub\ \underline{/\directlua{tex.sprint(get_resume_value("header", "github"))}}} $|$ 
+        % Phone number and location
+        \faPhone\ \directlua{tex.sprint(get_resume_value("header", "phone"))} $|$ 
+        \faMapMarker*\ \directlua{tex.sprint(get_resume_value("header", "address"))}
     \end{center}
 }
 
